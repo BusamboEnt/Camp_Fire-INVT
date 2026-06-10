@@ -8,12 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 
 class GearActivity : AppCompatActivity() {
     
-    // Parallel arrays for storage
-    private val items = ArrayList<String>()
-    private val categories = ArrayList<String>()
-    private val quantities = ArrayList<Int>()
-    private val notes = ArrayList<String>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gear)
@@ -31,11 +25,11 @@ class GearActivity : AppCompatActivity() {
             val note = notesInput.text.toString()
 
             if (name.isNotEmpty() && category.isNotEmpty() && qtyStr.isNotEmpty()) {
-                // Add to parallel arrays
-                items.add(name)
-                categories.add(category)
-                quantities.add(qtyStr.toInt())
-                notes.add(note)
+                // Save to shared manager
+                GearManager.items.add(name)
+                GearManager.categories.add(category)
+                GearManager.quantities.add(qtyStr.toInt())
+                GearManager.notes.add(note)
 
                 // Clear input field values
                 nameInput.text.clear()

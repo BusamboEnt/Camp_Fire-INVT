@@ -16,22 +16,11 @@ import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
-    // Storage for gear items
-    private val gearQuantities = ArrayList<Int>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val loadingOverlay = findViewById<View>(R.id.loading_overlay)
-        val totalItemsText = findViewById<TextView>(R.id.text_total_items)
-
-        // Calculate packed item total
-        var total = 0
-        for (qty in gearQuantities) {
-            total += qty
-        }
-        totalItemsText.text = "Total Items Packed: $total"
 
         // Simulate lazy loading delay
         Handler(Looper.getMainLooper()).postDelayed({
@@ -43,5 +32,24 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GearActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Refresh items packed count
+        updateItemCount()
+    }
+
+    private fun updateItemCount() {
+        val totalItemsText = findViewById<TextView>(R.id.text_total_items)
+        
+        // Calculate packed item total
+        var total = 0
+        for (qty in GearManager.quantities) {
+            total += qty
+        }
+        
+        // Display total items packed
+        totalItemsText.text = "Total Items Packed: $total"
     }
 }
