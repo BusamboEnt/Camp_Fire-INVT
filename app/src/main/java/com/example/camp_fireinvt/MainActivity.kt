@@ -11,13 +11,28 @@ import android.os.Handler
 import android.os.Looper
 import android.graphics.BitmapFactory
 
+import android.widget.TextView
+import android.content.Intent
+
 class MainActivity : AppCompatActivity() {
+
+    // Storage for gear items
+    private val gearQuantities = ArrayList<Int>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val loadingOverlay = findViewById<View>(R.id.loading_overlay)
         val loadingLogo = findViewById<ImageView>(R.id.loading_logo)
+        val totalItemsText = findViewById<TextView>(R.id.text_total_items)
+
+        // Calculate packed item total
+        var total = 0
+        for (qty in gearQuantities) {
+            total += qty
+        }
+        totalItemsText.text = "Total Items Packed: $total"
 
         // Load logo from assets
         try {
@@ -35,8 +50,9 @@ class MainActivity : AppCompatActivity() {
         }, 3000)
 
         findViewById<Button>(R.id.btn_gear).setOnClickListener {
-            // Open camping gear inventory
-            Toast.makeText(this, "Opening Gear Inventory", Toast.LENGTH_SHORT).show()
+            // Navigate to gear screen
+            val intent = Intent(this, GearActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.btn_food).setOnClickListener {

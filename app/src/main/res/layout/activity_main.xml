@@ -19,6 +19,16 @@
             android:textSize="32sp"
             android:textStyle="bold"
             android:textColor="@color/camp_primary_variant"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Total items packed counter -->
+        <TextView
+            android:id="@+id/text_total_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Items Packed: 0"
+            android:textSize="18sp"
+            android:textColor="@color/gray"
             android:layout_marginBottom="48dp" />
 
         <Button

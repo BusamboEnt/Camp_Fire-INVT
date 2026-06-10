@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/camp_background">
+
+    <!-- Screen title and heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Camping Gear"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/camp_primary_variant"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Gear item name input -->
+    <EditText
+        android:id="@+id/edit_gear_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name (e.g. Tent)"
+        android:inputType="text"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Gear category selection input -->
+    <EditText
+        android:id="@+id/edit_gear_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Category (e.g. Shelter)"
+        android:inputType="text"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Gear item quantity input -->
+    <EditText
+        android:id="@+id/edit_gear_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Gear notes and comments -->
+    <EditText
+        android:id="@+id/edit_gear_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notes / Comments"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Save gear item button -->
+    <Button
+        android:id="@+id/btn_save_gear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Save Gear Item"
+        android:backgroundTint="@color/camp_primary"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Back to dashboard button -->
+    <Button
+        android:id="@+id/btn_gear_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Back to Dashboard"
+        android:backgroundTint="@color/gray" />
+
+</LinearLayout>
