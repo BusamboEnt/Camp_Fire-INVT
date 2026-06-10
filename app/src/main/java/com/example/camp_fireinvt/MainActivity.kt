@@ -22,18 +22,21 @@ class MainActivity : AppCompatActivity() {
 
         val loadingOverlay = findViewById<View>(R.id.loading_overlay)
         val loadingLogo = findViewById<ImageView>(R.id.loading_logo)
+        val dashboardLogo = findViewById<ImageView>(R.id.dashboard_logo)
 
-        // Loads logo from assets
+        // Load logo from assets
         try {
             val inputStream = assets.open("camp mountain.png")
             val bitmap = BitmapFactory.decodeStream(inputStream)
             loadingLogo.setImageBitmap(bitmap)
+            dashboardLogo.setImageBitmap(bitmap)
         } catch (e: Exception) {
-            // Fallbacks to vector drawable
+            // Fallback to vector drawable
             loadingLogo.setImageResource(R.drawable.ic_mountain)
+            dashboardLogo.setImageResource(R.drawable.ic_mountain)
         }
 
-        // Simulates lazy loading delay
+        // Simulate lazy loading delay
         Handler(Looper.getMainLooper()).postDelayed({
             loadingOverlay.visibility = View.GONE
         }, 3000)
