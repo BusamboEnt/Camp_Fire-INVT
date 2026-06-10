@@ -67,8 +67,9 @@
     <Button
         android:id="@+id/btn_gear_back"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="64dp"
         android:text="Back to Dashboard"
-        android:backgroundTint="@color/gray" />
+        android:textSize="18sp"
+        android:backgroundTint="@color/camp_accent" />
 
 </LinearLayout>

@@ -13,11 +13,11 @@ class GearListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gear_list)
 
-        // Populate the gear list
+        // Populates the gear list
         displayGearItems()
 
         findViewById<Button>(R.id.btn_list_back).setOnClickListener {
-            // Return to main dashboard
+            // Returns to main dashboard
             finish()
         }
     }
@@ -31,17 +31,17 @@ class GearListActivity : AppCompatActivity() {
             // Inflate custom item layout
             val itemView = inflater.inflate(R.layout.view_gear_item, container, false)
 
-            // Find views within item
+            // Finds views within item
             val nameQty = itemView.findViewById<TextView>(R.id.item_name_qty)
             val category = itemView.findViewById<TextView>(R.id.item_category)
             val notes = itemView.findViewById<TextView>(R.id.item_notes)
 
-            // Set item display data
+            // Sets item display data
             nameQty.text = "${GearManager.items[i]} (x${GearManager.quantities[i]})"
             category.text = "Category: ${GearManager.categories[i]}"
             notes.text = "Tip: ${GearManager.notes[i]}"
 
-            // Add item to container
+            // Adds item to container
             container.addView(itemView)
         }
     }
