@@ -31,7 +31,10 @@ class GearActivity : AppCompatActivity() {
                 GearManager.quantities.add(qtyStr.toInt())
                 GearManager.notes.add(note)
 
-                // Clears input field values
+                // Save to persistent storage
+                GearManager.saveData(this)
+
+                // Clear input field values
                 nameInput.text.clear()
                 categoryInput.text.clear()
                 quantityInput.text.clear()

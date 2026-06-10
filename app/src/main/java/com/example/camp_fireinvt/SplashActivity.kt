@@ -32,7 +32,10 @@ class SplashActivity : AppCompatActivity() {
             splashImage.setImageResource(R.drawable.ic_mountain)
         }
 
-        // Enables full screen mode
+        // Load persistent gear data
+        GearManager.loadData(this)
+
+        // Enable full screen mode
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.setDecorFitsSystemWindows(false)
             window.insetsController?.let {
