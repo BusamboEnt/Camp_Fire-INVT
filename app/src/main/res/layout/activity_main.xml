@@ -53,38 +53,13 @@
         android:orientation="vertical"
         android:visibility="visible">
 
-        <!-- Logo during lazy loading -->
-        <ImageView
-            android:id="@+id/loading_logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginBottom="24dp"
-            android:contentDescription="Campsite Commander Logo"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_mountain" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Campsite Commander"
+            android:text="Loading.."
             android:textColor="@color/camp_primary_variant"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Lazy Loading Gear..."
-            android:textColor="@color/camp_primary"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="italic" />
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:indeterminateTint="@color/camp_primary" />
 
     </LinearLayout>
 
