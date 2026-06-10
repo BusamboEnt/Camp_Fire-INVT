@@ -4,36 +4,42 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#F5F5F5">
+    android:padding="24dp"
+    android:background="@color/camp_background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Campsite Commander"
-        android:textSize="28sp"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginBottom="40dp" />
+        android:textColor="@color/camp_primary_variant"
+        android:layout_marginBottom="48dp" />
 
     <Button
         android:id="@+id/btn_gear"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="64dp"
         android:text="Camping Gear"
+        android:textSize="18sp"
+        android:backgroundTint="@color/camp_primary"
         android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/btn_food"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="64dp"
         android:text="Food Supply"
+        android:textSize="18sp"
+        android:backgroundTint="@color/camp_secondary"
         android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/btn_checklist"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Complete Checklist" />
+        android:layout_height="64dp"
+        android:text="Complete Checklist"
+        android:textSize="18sp"
+        android:backgroundTint="@color/camp_accent" />
 
 </LinearLayout>
