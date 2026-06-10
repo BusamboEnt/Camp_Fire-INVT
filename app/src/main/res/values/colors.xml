@@ -5,10 +5,12 @@
     <color name="camp_primary_variant">#1B5E20</color> <!-- Dark Forest Green -->
     <color name="camp_secondary">#FF8F00</color> <!-- Campfire Orange -->
     <color name="camp_accent">#8D6E63</color> <!-- Earthy Brown -->
+    <color name="camp_strongcolor">#492E26</color> <!-- Dark Coffee -->
     <color name="camp_background">#F1F8E9</color> <!-- Light Moss Green -->
     <color name="camp_background_transparent">#CCF1F8E9</color> <!-- Semi-transparent Light Moss Green (80% alpha) -->
     
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#757575</color>
+    <color name="ic_launcher_background">#FFFEFA</color>
 </resources>
