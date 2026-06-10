@@ -18,7 +18,7 @@ class GearActivity : AppCompatActivity() {
         val notesInput = findViewById<EditText>(R.id.edit_gear_notes)
 
         findViewById<Button>(R.id.btn_save_gear).setOnClickListener {
-            // Validate user input fields
+            // Validates user input fields
             val name = nameInput.text.toString()
             val category = categoryInput.text.toString()
             val qtyStr = quantityInput.text.toString()
@@ -31,7 +31,7 @@ class GearActivity : AppCompatActivity() {
                 GearManager.quantities.add(qtyStr.toInt())
                 GearManager.notes.add(note)
 
-                // Clear input field values
+                // Clears input field values
                 nameInput.text.clear()
                 categoryInput.text.clear()
                 quantityInput.text.clear()
@@ -39,13 +39,13 @@ class GearActivity : AppCompatActivity() {
 
                 Toast.makeText(this, "Gear Item Saved", Toast.LENGTH_SHORT).show()
             } else {
-                // Show input error message
+                // Shows input error message
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             }
         }
 
         findViewById<Button>(R.id.btn_gear_back).setOnClickListener {
-            // Return to main dashboard
+            // Returns to main dashboard
             finish()
         }
     }
