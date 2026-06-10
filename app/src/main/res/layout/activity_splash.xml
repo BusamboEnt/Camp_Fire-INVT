@@ -2,21 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/camp_background_transparent">
+    android:background="@color/camp_background">
 
-    <!-- Title at the top -->
-    <TextView
-        android:id="@+id/splash_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:text="Campsite Commander"
-        android:textColor="@color/camp_primary_variant"
-        android:textSize="32sp"
-        android:textStyle="bold" />
-
-    <!-- Centered Image -->
+    <!-- Centered Image (Focus of the solid splash) -->
     <ImageView
         android:id="@+id/splash_image"
         android:layout_width="320dp"
@@ -25,17 +13,5 @@
         android:contentDescription="Camp Mountain"
         android:scaleType="centerInside"
         android:src="@drawable/ic_mountain" />
-
-    <!-- Subtitle or Loading Indicator -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/splash_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Loading Adventure..."
-        android:textColor="@color/camp_primary"
-        android:textSize="18sp"
-        android:textStyle="italic" />
 
 </RelativeLayout>

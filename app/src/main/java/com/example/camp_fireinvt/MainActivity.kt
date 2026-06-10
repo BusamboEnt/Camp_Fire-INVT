@@ -5,10 +5,21 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
+import android.view.View
+import android.os.Handler
+import android.os.Looper
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val loadingOverlay = findViewById<View>(R.id.loading_overlay)
+
+        // Simulate Lazy Loading for 3 seconds
+        Handler(Looper.getMainLooper()).postDelayed({
+            loadingOverlay.visibility = View.GONE
+        }, 3000)
 
         findViewById<Button>(R.id.btn_gear).setOnClickListener {
             // Intent to GearActivity (to be created)

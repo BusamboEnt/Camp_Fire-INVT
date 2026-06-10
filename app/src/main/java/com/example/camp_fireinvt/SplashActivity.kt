@@ -46,11 +46,11 @@ class SplashActivity : AppCompatActivity() {
             )
         }
 
-        // Transition to MainActivity after 3 seconds
+        // Transition to MainActivity after 1.5 seconds
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 1500)
     }
 }
