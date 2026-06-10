@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         // Load logo from assets
         try {
-            val inputStream = assets.open("Campfire Site.png")
+            val inputStream = assets.open("camp mountain.png")
             val bitmap = BitmapFactory.decodeStream(inputStream)
             loadingLogo.setImageBitmap(bitmap)
         } catch (e: Exception) {
