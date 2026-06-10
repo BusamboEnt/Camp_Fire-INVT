@@ -15,6 +15,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val loadingOverlay = findViewById<View>(R.id.loading_overlay)
+        val loadingLogo = findViewById<ImageView>(R.id.loading_logo)
+
+        // Try to load Campfire Site.png from assets as the logo
+        try {
+            val inputStream = assets.open("Campfire Site.png")
+            val bitmap = BitmapFactory.decodeStream(inputStream)
+            loadingLogo.setImageBitmap(bitmap)
+        } catch (e: Exception) {
+            // Fallback to vector drawable
+            loadingLogo.setImageResource(R.drawable.ic_mountain)
+        }
 
         // Simulate Lazy Loading for 3 seconds
         Handler(Looper.getMainLooper()).postDelayed({
