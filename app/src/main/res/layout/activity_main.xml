@@ -35,27 +35,9 @@
             android:id="@+id/btn_gear"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:text="Camping Gear"
+            android:text="Add Gear"
             android:textSize="18sp"
-            android:backgroundTint="@color/camp_primary"
-            android:layout_marginBottom="16dp" />
-
-        <Button
-            android:id="@+id/btn_food"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="Food Supply"
-            android:textSize="18sp"
-            android:backgroundTint="@color/camp_secondary"
-            android:layout_marginBottom="16dp" />
-
-        <Button
-            android:id="@+id/btn_checklist"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="Complete Checklist"
-            android:textSize="18sp"
-            android:backgroundTint="@color/camp_accent" />
+            android:backgroundTint="@color/camp_primary" />
 
     </LinearLayout>
 

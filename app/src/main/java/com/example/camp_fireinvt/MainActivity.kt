@@ -54,15 +54,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GearActivity::class.java)
             startActivity(intent)
         }
-
-        findViewById<Button>(R.id.btn_food).setOnClickListener {
-            // Open food supply inventory
-            Toast.makeText(this, "Opening Food Supply", Toast.LENGTH_SHORT).show()
-        }
-
-        findViewById<Button>(R.id.btn_checklist).setOnClickListener {
-            // Open complete packing checklist
-            Toast.makeText(this, "Opening Complete Checklist", Toast.LENGTH_SHORT).show()
-        }
     }
 }
