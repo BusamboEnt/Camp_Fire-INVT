@@ -19,19 +19,20 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        // Initialize splash image view
         val splashImage = findViewById<ImageView>(R.id.splash_image)
         
-        // Try to load camp mountain.png from assets
+        // Load image from assets
         try {
             val inputStream = assets.open("camp mountain.png")
             val bitmap = BitmapFactory.decodeStream(inputStream)
             splashImage.setImageBitmap(bitmap)
         } catch (e: IOException) {
-            // Fallback to vector drawable if asset is missing
+            // Fallback to vector drawable
             splashImage.setImageResource(R.drawable.ic_mountain)
         }
 
-        // Make full screen
+        // Enable full screen mode
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.setDecorFitsSystemWindows(false)
             window.insetsController?.let {
@@ -46,7 +47,7 @@ class SplashActivity : AppCompatActivity() {
             )
         }
 
-        // Transition to MainActivity after 1.5 seconds
+        // Transition to next screen
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

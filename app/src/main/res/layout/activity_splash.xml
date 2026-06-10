@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/camp_background">
 
-    <!-- Centered Image (Focus of the solid splash) -->
+    <!-- Center logo image vertically -->
     <ImageView
         android:id="@+id/splash_image"
         android:layout_width="320dp"

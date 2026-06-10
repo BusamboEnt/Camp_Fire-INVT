@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val loadingOverlay = findViewById<View>(R.id.loading_overlay)
         val loadingLogo = findViewById<ImageView>(R.id.loading_logo)
 
-        // Try to load Campfire Site.png from assets as the logo
+        // Load logo from assets
         try {
             val inputStream = assets.open("Campfire Site.png")
             val bitmap = BitmapFactory.decodeStream(inputStream)
@@ -29,23 +29,23 @@ class MainActivity : AppCompatActivity() {
             loadingLogo.setImageResource(R.drawable.ic_mountain)
         }
 
-        // Simulate Lazy Loading for 3 seconds
+        // Simulate lazy loading delay
         Handler(Looper.getMainLooper()).postDelayed({
             loadingOverlay.visibility = View.GONE
         }, 3000)
 
         findViewById<Button>(R.id.btn_gear).setOnClickListener {
-            // Intent to GearActivity (to be created)
+            // Open camping gear inventory
             Toast.makeText(this, "Opening Gear Inventory", Toast.LENGTH_SHORT).show()
         }
 
         findViewById<Button>(R.id.btn_food).setOnClickListener {
-            // Intent to FoodActivity (to be created)
+            // Open food supply inventory
             Toast.makeText(this, "Opening Food Supply", Toast.LENGTH_SHORT).show()
         }
 
         findViewById<Button>(R.id.btn_checklist).setOnClickListener {
-            // Intent to ChecklistActivity (to be created)
+            // Open complete packing checklist
             Toast.makeText(this, "Opening Complete Checklist", Toast.LENGTH_SHORT).show()
         }
     }
