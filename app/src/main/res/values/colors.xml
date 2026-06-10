@@ -6,6 +6,7 @@
     <color name="camp_secondary">#FF8F00</color> <!-- Campfire Orange -->
     <color name="camp_accent">#8D6E63</color> <!-- Earthy Brown -->
     <color name="camp_background">#F1F8E9</color> <!-- Light Moss Green -->
+    <color name="camp_background_transparent">#CCF1F8E9</color> <!-- Semi-transparent Light Moss Green (80% alpha) -->
     
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
