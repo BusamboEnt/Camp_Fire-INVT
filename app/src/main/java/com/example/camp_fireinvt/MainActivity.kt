@@ -32,6 +32,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GearActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<Button>(R.id.btn_view_list).setOnClickListener {
+            // Navigate to list screen
+            val intent = Intent(this, GearListActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {

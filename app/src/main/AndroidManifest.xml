@@ -30,6 +30,10 @@
             android:name=".GearActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".GearListActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

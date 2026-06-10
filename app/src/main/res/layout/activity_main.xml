@@ -37,7 +37,17 @@
             android:layout_height="64dp"
             android:text="Add Gear"
             android:textSize="18sp"
-            android:backgroundTint="@color/camp_primary" />
+            android:backgroundTint="@color/camp_primary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Button to view checklist -->
+        <Button
+            android:id="@+id/btn_view_list"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="View Checklist"
+            android:textSize="18sp"
+            android:backgroundTint="@color/camp_secondary" />
 
     </LinearLayout>
 
