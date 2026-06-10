@@ -77,12 +77,12 @@ object GearManager {
     private fun addSampleData(context: Context) {
         // Initialize with sample items
         items.add("Camping Tent")
-        categories.add("Shelter")
+        categories.add("Shelter & Sleep")
         quantities.add(1)
         notes.add("Waterproof four person tent")
 
         items.add("Sleeping Bag")
-        categories.add("Bedding")
+        categories.add("Shelter & Sleep")
         quantities.add(2)
         notes.add("Rated for cold weather")
 

@@ -1,6 +1,8 @@
 package com.example.camp_fireinvt
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -13,9 +15,22 @@ class GearActivity : AppCompatActivity() {
         setContentView(R.layout.activity_gear)
 
         val nameInput = findViewById<EditText>(R.id.edit_gear_name)
-        val categoryInput = findViewById<EditText>(R.id.edit_gear_category)
+        val categoryInput = findViewById<AutoCompleteTextView>(R.id.edit_gear_category)
         val quantityInput = findViewById<EditText>(R.id.edit_gear_quantity)
         val notesInput = findViewById<EditText>(R.id.edit_gear_notes)
+
+        // Define gear category options
+        val categories = arrayOf(
+            "Shelter & Sleep",
+            "Camp Kitchen & Food",
+            "Clothing",
+            "Toiletries & Health",
+            "Tools, Safety & Comfort"
+        )
+
+        // Set up dropdown adapter
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, categories)
+        categoryInput.setAdapter(adapter)
 
         findViewById<Button>(R.id.btn_save_gear).setOnClickListener {
             // Validates user input fields
